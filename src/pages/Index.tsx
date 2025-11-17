@@ -10,14 +10,12 @@ import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import FAQSection from "@/components/sections/FAQSection";
 import WaitlistSection from "@/components/sections/WaitlistSection";
 import FooterSection from "@/components/sections/FooterSection";
-
 const Index = () => {
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       <Navigation />
       <HeroSection />
-      <ProductShowcase />
-      <FeaturedIn />
+      
+      <FeaturedIn className="mx-0 my-0 px-0 py-[21px]" />
       <IntroSection />
       <FeaturesCarousel />
       <HowItWorks />
@@ -26,8 +24,6 @@ const Index = () => {
       <FAQSection />
       <WaitlistSection />
       <FooterSection />
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
