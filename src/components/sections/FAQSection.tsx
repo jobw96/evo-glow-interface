@@ -56,7 +56,7 @@ const FAQSection = () => {
             <p className="text-lg text-muted-foreground mb-6">
               Everything you need to know about EvoTrack before getting started.
             </p>
-            <Button onClick={scrollToWaitlist} className="neuro-button bg-lime-400 hover:bg-lime-300 text-zinc-950">
+            <Button onClick={scrollToWaitlist} className="neuro-button bg-lime-400 hover:bg-lime-300 text-zinc-950 bg-[3bf73b] bg-green-500 hover:bg-green-400">
               Join waitlist
             </Button>
           </div>

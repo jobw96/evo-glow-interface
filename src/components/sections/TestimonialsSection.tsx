@@ -51,7 +51,7 @@ const TestimonialsSection = () => {
       <div className="max-w-6xl mx-auto">
         <div className="mb-12">
           <span className="inline-flex items-center gap-2 text-sm text-muted-foreground mb-4">
-            <span className="w-2 h-2 rounded-full bg-accent" />
+            <span className="w-2 h-2 rounded-full bg-accent text-green-500" />
             Testimonials
           </span>
           <h2 className="mb-4">Trusted by Athletes<br />Worldwide</h2>
@@ -62,10 +62,10 @@ const TestimonialsSection = () => {
 
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="flex justify-center gap-4 md:order-1">
-            <Button onClick={prev} size="icon" className="neuro-button rounded-full w-12 h-12 bg-lime-400 hover:bg-lime-300">
+            <Button onClick={prev} size="icon" className="neuro-button rounded-full w-12 h-12 bg-lime-400 hover:bg-lime-300 bg-green-500 hover:bg-green-400">
               <ChevronLeft className="w-5 h-5 text-accent-foreground" />
             </Button>
-            <Button onClick={next} size="icon" className="neuro-button rounded-full w-12 h-12 bg-lime-400 hover:bg-lime-300">
+            <Button onClick={next} size="icon" className="neuro-button rounded-full w-12 h-12 bg-lime-400 hover:bg-lime-300 bg-green-500 hover:bg-green-400">
               <ChevronRight className="w-5 h-5 text-accent-foreground" />
             </Button>
           </div>
@@ -88,8 +88,8 @@ const TestimonialsSection = () => {
                   <div className="text-muted-foreground">{testimonials[currentIndex].role}</div>
                 </div>
                 <div className="text-right">
-                  <div className="text-sm text-muted-foreground mb-1">Result</div>
-                  <div className="font-normal text-accent">{testimonials[currentIndex].result}</div>
+                  
+                  
                 </div>
               </div>
               <div className="text-sm text-muted-foreground mt-6">

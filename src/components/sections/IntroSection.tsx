@@ -25,7 +25,7 @@ const IntroSection = () => {
       <div className="max-w-6xl mx-auto">
         <div className="scroll-reveal text-center mb-16">
           <span className="inline-flex items-center gap-2 text-sm text-muted-foreground mb-4">
-            <span className="w-2 h-2 rounded-full bg-accent" />
+            <span className="w-2 h-2 rounded-full bg-accent text-green-500" />
             Introduction
           </span>
           <h2 className="mb-6">Smarter. Faster. More Personal.</h2>

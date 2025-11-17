@@ -52,7 +52,7 @@ const WaitlistSection = () => {
 
               <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
                 <Input type="email" placeholder="jane@framer.com" value={email} onChange={e => setEmail(e.target.value)} required className="bg-white/10 backdrop-blur-lg border-white/20 text-white placeholder:text-white/60 h-12" />
-                <Button type="submit" className="neuro-button whitespace-nowrap h-12 px-8 text-zinc-950 bg-lime-400 hover:bg-lime-300">
+                <Button type="submit" className="neuro-button whitespace-nowrap h-12 px-8 text-zinc-950 bg-lime-400 hover:bg-lime-300 bg-green-500 hover:bg-green-400">
                   Join the waitlist
                 </Button>
               </form>
