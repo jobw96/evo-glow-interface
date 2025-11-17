@@ -8,41 +8,44 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 98%;
-    --foreground: 220 15% 10%;
+    --background: 210 20% 98%;
+    --foreground: 215 25% 27%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 15% 10%;
+    --card-foreground: 215 25% 27%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 15% 10%;
+    --popover-foreground: 215 25% 27%;
 
-    --primary: 220 40% 20%;
+    --primary: 203 85% 16%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 15% 95%;
-    --secondary-foreground: 220 15% 10%;
+    --secondary: 210 20% 98%;
+    --secondary-foreground: 215 25% 27%;
 
-    --muted: 220 15% 96%;
-    --muted-foreground: 220 10% 45%;
+    --muted: 214 32% 91%;
+    --muted-foreground: 215 16% 47%;
 
-    --accent: 75 100% 50%;
-    --accent-foreground: 220 40% 10%;
+    --accent: 163 100% 50%;
+    --accent-foreground: 203 85% 16%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 15% 88%;
-    --input: 220 15% 90%;
-    --ring: 75 100% 50%;
+    --border: 218 20% 90%;
+    --input: 218 20% 90%;
+    --ring: 163 100% 50%;
 
     --radius: 1rem;
 
-    --glass-bg: 0 0% 100% / 0.7;
-    --glass-border: 220 15% 88% / 0.3;
+    --text-dark: 215 25% 27%;
+    --text-medium: 215 16% 47%;
+    --text-light: 214 32% 91%;
+    --navy: 203 85% 16%;
+    --lime: 163 100% 50%;
     
-    --hero-gradient-start: 210 50% 45%;
-    --hero-gradient-end: 220 40% 25%;
+    --hero-gradient-start: 203 85% 16%;
+    --hero-gradient-end: 203 85% 16%;
   }
 }
 
@@ -54,46 +57,50 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground antialiased;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     letter-spacing: -0.01em;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-light tracking-tight;
+    @apply tracking-tight;
   }
 
   h1 {
-    @apply text-5xl md:text-7xl;
-    letter-spacing: -0.03em;
+    @apply text-5xl md:text-[80px] leading-[1.1];
+    font-weight: 900;
+    letter-spacing: -0.02em;
   }
 
   h2 {
-    @apply text-4xl md:text-5xl;
-    letter-spacing: -0.025em;
+    @apply text-3xl md:text-5xl leading-[1.2];
+    font-weight: 700;
+    letter-spacing: -0.02em;
   }
 
   h3 {
-    @apply text-2xl md:text-3xl;
-    letter-spacing: -0.02em;
+    @apply text-xl md:text-2xl leading-[1.3];
+    font-weight: 600;
+    letter-spacing: -0.01em;
   }
 }
 
 @layer components {
   .glass-card {
-    @apply bg-white/70 backdrop-blur-xl border border-white/30 shadow-lg;
+    @apply bg-white backdrop-blur-xl border border-border/10;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.06);
+    border-radius: 16px;
   }
 
-  .neuro-button {
-    @apply relative overflow-hidden;
-    background: hsl(var(--accent));
-    box-shadow: 0 4px 14px 0 hsla(var(--accent) / 0.4),
-                inset 0 1px 0 0 hsla(0 0% 100% / 0.5);
+  .lime-button {
+    @apply relative overflow-hidden font-semibold;
+    background: hsl(var(--lime));
+    color: hsl(var(--navy));
+    border-radius: 12px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  .neuro-button:hover {
-    box-shadow: 0 6px 20px 0 hsla(var(--accent) / 0.6),
-                inset 0 1px 0 0 hsla(0 0% 100% / 0.5);
+  .lime-button:hover {
+    box-shadow: 0px 8px 32px rgba(0, 255, 170, 0.25);
     transform: translateY(-2px);
   }
 

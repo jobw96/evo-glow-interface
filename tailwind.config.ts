@@ -47,14 +47,11 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        glass: {
-          bg: "hsla(var(--glass-bg))",
-          border: "hsla(var(--glass-border))",
-        },
-        hero: {
-          start: "hsl(var(--hero-gradient-start))",
-          end: "hsl(var(--hero-gradient-end))",
-        },
+        navy: "hsl(var(--navy))",
+        lime: "hsl(var(--lime))",
+        "text-dark": "hsl(var(--text-dark))",
+        "text-medium": "hsl(var(--text-medium))",
+        "text-light": "hsl(var(--text-light))",
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
