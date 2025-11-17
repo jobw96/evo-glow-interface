@@ -1,8 +1,6 @@
 import { Instagram, Music2, Linkedin } from "lucide-react";
-
 const FooterSection = () => {
-  return (
-    <footer className="py-16 px-6 border-t border-border/50">
+  return <footer className="py-16 px-6 border-t border-border/50">
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           <div>
@@ -14,28 +12,13 @@ const FooterSection = () => {
               Track every move, analyze your performance, and get real-time coaching, all from your wrist.
             </p>
             <div className="flex gap-4">
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full border border-border flex items-center justify-center hover:border-accent transition-colors"
-              >
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-border flex items-center justify-center hover:border-accent transition-colors">
                 <Instagram size={18} />
               </a>
-              <a
-                href="https://tiktok.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full border border-border flex items-center justify-center hover:border-accent transition-colors"
-              >
+              <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-border flex items-center justify-center hover:border-accent transition-colors">
                 <Music2 size={18} />
               </a>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full border border-border flex items-center justify-center hover:border-accent transition-colors"
-              >
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-border flex items-center justify-center hover:border-accent transition-colors">
                 <Linkedin size={18} />
               </a>
             </div>
@@ -79,12 +62,10 @@ const FooterSection = () => {
         </div>
 
         <div className="pt-8 border-t border-border/50 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
-          <p>Created by Arthur in Framer</p>
-          <p>© 2025 EvoTrack. All rights reserved.</p>
+          
+          <p>© 2025 Nieuwblik. All rights reserved.</p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default FooterSection;
