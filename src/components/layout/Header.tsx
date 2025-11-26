@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { Leaf, Menu, ArrowRight } from "lucide-react";
+import { Leaf, Menu } from "lucide-react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -66,13 +66,18 @@ const Header = () => {
             <Menu className="h-5 w-5" />
           </button>
 
-          <Link
-            to="#waitlist"
-            className="hidden md:inline-flex items-center justify-center rounded-xl bg-amber-500 px-4 py-2.5 text-sm font-medium shadow-sm transition-colors text-white hover:bg-amber-600"
+          <motion.div
+            whileHover={{ scale: 1.05, y: -2 }}
+            whileTap={{ scale: 0.95 }}
+            className="hidden md:block"
           >
-            Preorder
-            <ArrowRight className="h-4 w-4 ml-2" />
-          </Link>
+            <Link
+              to="/contact"
+              className="inline-flex items-center justify-center px-6 py-3 rounded-xl text-sm font-medium transition-all duration-300 bg-white text-black hover:bg-gray-100 shadow-lg shadow-white/10"
+            >
+              Contact
+            </Link>
+          </motion.div>
         </div>
       </div>
 
