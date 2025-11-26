@@ -1,6 +1,7 @@
 import ModernHero from "@/components/ui/modern-hero";
 import IntroSection from "@/components/sections/IntroSection";
 import FeaturesCarousel from "@/components/sections/FeaturesCarousel";
+import IntegrationsSection from "@/components/sections/IntegrationsSection";
 import HowItWorks from "@/components/sections/HowItWorks";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import FAQSection from "@/components/sections/FAQSection";
@@ -15,7 +16,7 @@ const Index = () => {
     <div className="min-h-screen">
       <Header />
       <ThemeToggle />
-      <ModernHero 
+      <ModernHero
         title="Creative Developer"
         subtitle="& Digital Designer"
         description="I craft digital experiences that blend beautiful design with seamless functionality. Specializing in modern web technologies, interactive animations, and user-centered design that makes brands memorable and products delightful to use."
@@ -31,6 +32,9 @@ const Index = () => {
       <ZoomScrollSection zoomStart={0.9} zoomEnd={1.05} className="min-h-screen py-12">
         <FeaturesCarousel />
       </ZoomScrollSection>
+      <AppleScrollSection className="py-12">
+        <IntegrationsSection />
+      </AppleScrollSection>
       <AppleScrollSection className="py-12">
         <HowItWorks />
       </AppleScrollSection>
