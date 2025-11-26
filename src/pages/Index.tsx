@@ -1,4 +1,4 @@
-import Hero from "@/components/ui/neural-network-hero";
+import ModernHero from "@/components/ui/modern-hero";
 import IntroSection from "@/components/sections/IntroSection";
 import FeaturesCarousel from "@/components/sections/FeaturesCarousel";
 import HowItWorks from "@/components/sections/HowItWorks";
@@ -15,16 +15,15 @@ const Index = () => {
     <div className="min-h-screen">
       <Header />
       <ThemeToggle />
-      <Hero 
-        title="dit is een test"
-        description="Train smarter with real-time feedback, AI-driven insights, and precision tracking that adapts to your goals."
-        badgeText="AI-Powered Fitness"
-        badgeLabel="New"
+      <ModernHero 
+        title="Creative Developer"
+        subtitle="& Digital Designer"
+        description="I craft digital experiences that blend beautiful design with seamless functionality. Specializing in modern web technologies, interactive animations, and user-centered design that makes brands memorable and products delightful to use."
+        badgeText="Available for new projects"
         ctaButtons={[
           { text: "Join waitlist now", href: "#waitlist", primary: true },
           { text: "neem contact", href: "/contact" }
         ]}
-        microDetails={["Real-time tracking", "Smart AI insights", "Adaptive goals"]}
       />
       <ParallaxSection speed={0.315}>
         <IntroSection />
