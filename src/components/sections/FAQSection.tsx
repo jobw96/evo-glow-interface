@@ -1,24 +1,9 @@
-import { useEffect, useRef } from "react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+import { ScrollAnimation } from "@/components/ui/scroll-animation";
+
 const FAQSection = () => {
-  const sectionRef = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("revealed");
-        }
-      });
-    }, {
-      threshold: 0.1
-    });
-    if (sectionRef.current) {
-      const elements = sectionRef.current.querySelectorAll(".scroll-reveal");
-      elements.forEach(el => observer.observe(el));
-    }
-    return () => observer.disconnect();
-  }, []);
   const scrollToWaitlist = () => {
     const element = document.getElementById("waitlist");
     element?.scrollIntoView({
@@ -44,37 +29,94 @@ const FAQSection = () => {
     question: "Is EvoTrack waterproof?",
     answer: "Yes, EvoTrack is water-resistant up to 50 meters, making it perfect for swimming, showering, and all weather conditions."
   }];
-  return <section id="faq" ref={sectionRef} className="py-24 px-6">
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { x: -30, opacity: 0 },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        ease: [0.25, 0.46, 0.45, 0.94],
+      },
+    },
+  };
+
+  return (
+    <section id="faq" className="py-24 px-6">
       <div className="max-w-4xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-12 mb-12">
-          <div className="scroll-reveal">
+        <motion.div
+          className="grid md:grid-cols-2 gap-12 mb-12"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+        >
+          <motion.div variants={itemVariants}>
             <span className="inline-flex items-center gap-2 text-sm text-muted-foreground mb-4">
               <span className="w-2 h-2 rounded-full bg-accent" />
               FAQ
             </span>
-            <h2 className="mb-4">Frequently Asked<br />Questions</h2>
+            <h2 className="mb-4">
+              Frequently Asked<br />
+              Questions
+            </h2>
             <p className="text-lg text-muted-foreground mb-6">
               Everything you need to know about EvoTrack before getting started.
             </p>
-            <Button onClick={scrollToWaitlist} className="neuro-button bg-lime-400 hover:bg-lime-300 text-zinc-950 bg-[3bf73b] bg-green-500 hover:bg-green-400">
-              Join waitlist
-            </Button>
-          </div>
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Button
+                onClick={scrollToWaitlist}
+                className="neuro-button bg-lime-400 hover:bg-lime-300 text-zinc-950 bg-[3bf73b] bg-green-500 hover:bg-green-400"
+              >
+                Join waitlist
+              </Button>
+            </motion.div>
+          </motion.div>
 
-          <div className="scroll-reveal">
-            <Accordion type="single" collapsible className="space-y-4" defaultValue="item-0">
-              {faqs.map((faq, index) => <AccordionItem key={index} value={`item-${index}`} className="border-b border-border/50">
-                  <AccordionTrigger className="hover:no-underline text-left font-normal py-4">
-                    {faq.question}
-                  </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground pb-4">
-                    {faq.answer}
-                  </AccordionContent>
-                </AccordionItem>)}
+          <motion.div variants={itemVariants}>
+            <Accordion
+              type="single"
+              collapsible
+              className="space-y-4"
+              defaultValue="item-0"
+            >
+              {faqs.map((faq, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                >
+                  <AccordionItem
+                    value={`item-${index}`}
+                    className="border-b border-border/50"
+                  >
+                    <AccordionTrigger className="hover:no-underline text-left font-normal py-4">
+                      {faq.question}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground pb-4">
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                </motion.div>
+              ))}
             </Accordion>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
-    </section>;
+    </section>
+  );
 };
 export default FAQSection;

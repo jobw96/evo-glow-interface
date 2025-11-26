@@ -8,16 +8,9 @@ import WaitlistSection from "@/components/sections/WaitlistSection";
 import ContactSection from "@/components/sections/ContactSection";
 import FooterSection from "@/components/sections/FooterSection";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
-import { useParallax } from "@/hooks/use-parallax";
+import { ParallaxSection } from "@/components/ui/scroll-animation";
 
 const Index = () => {
-  const introParallax = useParallax<HTMLElement>({ speed: 0.315 });
-  const featuresParallax = useParallax<HTMLElement>({ speed: 0.21 });
-  const howItWorksParallax = useParallax<HTMLElement>({ speed: 0.2625 });
-  const testimonialsParallax = useParallax<HTMLElement>({ speed: 0.21 });
-  const faqParallax = useParallax<HTMLElement>({ speed: 0.1575 });
-  const contactParallax = useParallax<HTMLElement>({ speed: 0.18 });
-
   return (
     <div className="min-h-screen">
       <ThemeToggle />
@@ -32,25 +25,25 @@ const Index = () => {
         ]}
         microDetails={["Real-time tracking", "Smart AI insights", "Adaptive goals"]}
       />
-      <div ref={introParallax}>
+      <ParallaxSection speed={0.315}>
         <IntroSection />
-      </div>
-      <div ref={featuresParallax}>
+      </ParallaxSection>
+      <ParallaxSection speed={0.21}>
         <FeaturesCarousel />
-      </div>
-      <div ref={howItWorksParallax}>
+      </ParallaxSection>
+      <ParallaxSection speed={0.2625}>
         <HowItWorks />
-      </div>
-      <div ref={testimonialsParallax}>
+      </ParallaxSection>
+      <ParallaxSection speed={0.21}>
         <TestimonialsSection />
-      </div>
-      <div ref={faqParallax}>
+      </ParallaxSection>
+      <ParallaxSection speed={0.1575}>
         <FAQSection />
-      </div>
+      </ParallaxSection>
       <WaitlistSection />
-      <div ref={contactParallax}>
+      <ParallaxSection speed={0.18}>
         <ContactSection />
-      </div>
+      </ParallaxSection>
       <FooterSection />
     </div>
   );
