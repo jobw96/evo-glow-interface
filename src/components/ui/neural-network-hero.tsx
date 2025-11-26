@@ -2,6 +2,7 @@ import { useRef, useMemo } from 'react';
 import { Canvas, useFrame, extend } from '@react-three/fiber';
 import { shaderMaterial } from '@react-three/drei';
 import * as THREE from 'three';
+import { useNavigate } from 'react-router-dom';
 
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
@@ -252,7 +253,15 @@ export default function Hero({
   const microItem2Ref = useRef<HTMLLIElement | null>(null);
   const microItem3Ref = useRef<HTMLLIElement | null>(null);
 
+  const navigate = useNavigate();
+  
   const scrollToSection = (href: string) => {
+    // If href starts with /, it's a route - navigate to it
+    if (href.startsWith('/')) {
+      navigate(href);
+      return;
+    }
+    // Otherwise, it's an anchor link - scroll to it
     const id = href.replace('#', '');
     const element = document.getElementById(id);
     if (element) {

@@ -22,7 +22,7 @@ const Index = () => {
         badgeLabel="New"
         ctaButtons={[
           { text: "Join waitlist now", href: "#waitlist", primary: true },
-          { text: "Learn more", href: "#intro" }
+          { text: "neem contact", href: "/contact" }
         ]}
         microDetails={["Real-time tracking", "Smart AI insights", "Adaptive goals"]}
       />
