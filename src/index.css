@@ -47,6 +47,45 @@ All colors MUST be HSL.
     --hero-gradient-start: 203 85% 16%;
     --hero-gradient-end: 203 85% 16%;
   }
+
+  .dark {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+
+    --card: 0 0% 5%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 163 100% 50%;
+    --primary-foreground: 0 0% 0%;
+
+    --secondary: 0 0% 8%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 8%;
+    --muted-foreground: 0 0% 80%;
+
+    --accent: 163 100% 50%;
+    --accent-foreground: 0 0% 0%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 163 100% 50%;
+
+    --text-dark: 0 0% 100%;
+    --text-medium: 0 0% 85%;
+    --text-light: 0 0% 60%;
+    --navy: 163 100% 50%;
+    --lime: 163 100% 50%;
+    
+    --hero-gradient-start: 203 85% 16%;
+    --hero-gradient-end: 203 85% 16%;
+  }
 }
 
 @layer base {
@@ -86,9 +125,13 @@ All colors MUST be HSL.
 
 @layer components {
   .glass-card {
-    @apply bg-white backdrop-blur-xl border border-border/10;
+    @apply bg-white dark:bg-card backdrop-blur-xl border border-border/10;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.06);
     border-radius: 16px;
+  }
+  
+  .dark .glass-card {
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
   }
 
   .lime-button {
@@ -137,5 +180,20 @@ All colors MUST be HSL.
     backdrop-filter: blur(20px);
     background: hsla(var(--background) / 0.8);
     border-bottom: 1px solid hsl(var(--border) / 0.5);
+  }
+
+  .parallax-slow {
+    transform: translateZ(0);
+    will-change: transform;
+  }
+
+  .parallax-medium {
+    transform: translateZ(0);
+    will-change: transform;
+  }
+
+  .parallax-fast {
+    transform: translateZ(0);
+    will-change: transform;
   }
 }
