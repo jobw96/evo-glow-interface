@@ -8,7 +8,7 @@ import WaitlistSection from "@/components/sections/WaitlistSection";
 import FooterSection from "@/components/sections/FooterSection";
 import Header from "@/components/layout/Header";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
-import { ParallaxSection } from "@/components/ui/scroll-animation";
+import { AppleScrollSection, ZoomScrollSection } from "@/components/ui/apple-scroll-section";
 
 const Index = () => {
   return (
@@ -25,22 +25,24 @@ const Index = () => {
           { text: "neem contact", href: "/contact" }
         ]}
       />
-      <ParallaxSection speed={0.315}>
+      <AppleScrollSection className="py-12">
         <IntroSection />
-      </ParallaxSection>
-      <ParallaxSection speed={0.21}>
+      </AppleScrollSection>
+      <ZoomScrollSection zoomStart={0.9} zoomEnd={1.05} className="min-h-screen py-12">
         <FeaturesCarousel />
-      </ParallaxSection>
-      <ParallaxSection speed={0.2625}>
+      </ZoomScrollSection>
+      <AppleScrollSection className="py-12">
         <HowItWorks />
-      </ParallaxSection>
-      <ParallaxSection speed={0.21}>
+      </AppleScrollSection>
+      <ZoomScrollSection zoomStart={0.85} zoomEnd={1} className="min-h-screen py-12">
         <TestimonialsSection />
-      </ParallaxSection>
-      <ParallaxSection speed={0.1575}>
+      </ZoomScrollSection>
+      <AppleScrollSection className="py-12">
         <FAQSection />
-      </ParallaxSection>
-      <WaitlistSection />
+      </AppleScrollSection>
+      <AppleScrollSection>
+        <WaitlistSection />
+      </AppleScrollSection>
       <FooterSection />
     </div>
   );
