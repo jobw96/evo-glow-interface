@@ -54,9 +54,9 @@ export default function ModernHero({
   };
 
   const stats = [
-    { value: "50+", label: ["Projects", "Completed"] },
-    { value: "5+", label: ["Years Experience"] },
-    { value: "25+", label: ["Happy Clients"] },
+    { value: "> 150+", label: ["Projects", "Completed"] },
+    { value: "10+", label: ["Years", "Experience"] },
+    { value: "50+", label: ["Happy", "Clients"] },
   ];
 
   const specialties = [
@@ -175,10 +175,9 @@ export default function ModernHero({
                   whileTap={{ scale: 0.95 }}
                   className={`
                     px-6 py-3 rounded-xl text-sm font-medium transition-all duration-300
-                    ${
-                      button.primary
-                        ? "bg-white text-black hover:bg-gray-100 shadow-lg shadow-white/10"
-                        : "bg-white/5 text-gray-300 border border-white/10 hover:bg-white/10 hover:border-white/20 backdrop-blur-sm"
+                    ${button.primary
+                      ? "bg-white text-black hover:bg-gray-100 shadow-lg shadow-white/10"
+                      : "bg-white/5 text-gray-300 border border-white/10 hover:bg-white/10 hover:border-white/20 backdrop-blur-sm"
                     }
                   `}
                 >
