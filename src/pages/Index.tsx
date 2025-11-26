@@ -5,14 +5,15 @@ import HowItWorks from "@/components/sections/HowItWorks";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import FAQSection from "@/components/sections/FAQSection";
 import WaitlistSection from "@/components/sections/WaitlistSection";
-import ContactSection from "@/components/sections/ContactSection";
 import FooterSection from "@/components/sections/FooterSection";
+import Header from "@/components/layout/Header";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { ParallaxSection } from "@/components/ui/scroll-animation";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <Header />
       <ThemeToggle />
       <Hero 
         title="dit is een test"
@@ -41,9 +42,6 @@ const Index = () => {
         <FAQSection />
       </ParallaxSection>
       <WaitlistSection />
-      <ParallaxSection speed={0.18}>
-        <ContactSection />
-      </ParallaxSection>
       <FooterSection />
     </div>
   );
