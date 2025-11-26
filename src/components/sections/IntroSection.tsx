@@ -33,8 +33,8 @@ const IntroSection = () => {
     <section id="about" className="py-24 px-6">
       <div className="max-w-6xl mx-auto">
         <ScrollAnimation direction="fade" className="text-center mb-16">
-          <span className="inline-flex items-center gap-2 text-sm text-muted-foreground mb-4">
-            <span className="w-2 h-2 rounded-full bg-accent text-green-500" />
+          <span className="inline-flex items-center gap-1 rounded-full bg-blue-400/10 px-3 py-1.5 text-xs text-blue-300 ring-1 ring-blue-300/20 uppercase tracking-tight mb-4">
+            <Sparkles className="h-3.5 w-3.5" />
             Introduction
           </span>
           <h2 className="mb-6">Smarter. Faster. More Personal.</h2>

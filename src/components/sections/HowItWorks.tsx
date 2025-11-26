@@ -72,6 +72,23 @@ const HowItWorks = () => {
     <section className="py-24 px-6 relative overflow-hidden">
       <div className="max-w-6xl mx-auto relative">
         <ScrollAnimation direction="fade" className="text-center mb-20">
+          <span className="inline-flex items-center gap-1 rounded-full bg-green-400/10 px-3 py-1.5 text-xs text-green-300 ring-1 ring-green-300/20 uppercase tracking-tight mb-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="h-3.5 w-3.5"
+            >
+              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+            </svg>
+            Process
+          </span>
           <h2 className="mb-4 text-4xl md:text-5xl font-bold">How It Works</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Three simple steps to transform your training

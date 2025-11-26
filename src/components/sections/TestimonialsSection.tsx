@@ -48,66 +48,82 @@ const TestimonialsSection = () => {
     setCurrentIndex(prev => (prev - 1 + testimonials.length) % testimonials.length);
   };
   return <section id="testimonials" ref={sectionRef} className="scroll-reveal py-16 px-6">
-      <div className="max-w-4xl mx-auto">
-        <div className="mb-8 text-center">
-          <h2 className="mb-3">Trusted by Athletes Worldwide</h2>
-          <p className="text-base text-muted-foreground">
-            Real feedback from athletes pushing their limits
-          </p>
-        </div>
+    <div className="max-w-4xl mx-auto">
+      <div className="mb-8 text-center">
+        <span className="inline-flex items-center gap-1 rounded-full bg-orange-400/10 px-3 py-1.5 text-xs text-orange-300 ring-1 ring-orange-300/20 uppercase tracking-tight mb-4">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="14"
+            height="14"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="h-3.5 w-3.5"
+          >
+            <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+          </svg>
+          Testimonials
+        </span>
+        <h2 className="mb-3">Trusted by Athletes Worldwide</h2>
+        <p className="text-base text-muted-foreground">
+          Real feedback from athletes pushing their limits
+        </p>
+      </div>
 
-        <div className="glass-card rounded-2xl p-6 md:p-8">
-          <div className="flex flex-col md:flex-row gap-6 items-start">
-            <img 
-              src={testimonials[currentIndex].image} 
-              alt={testimonials[currentIndex].name} 
-              className="w-20 h-20 rounded-full object-cover flex-shrink-0" 
-            />
-            
-            <div className="flex-1">
-              <div className="text-2xl font-light mb-4 leading-tight italic">
-                "{testimonials[currentIndex].quote}"
+      <div className="glass-card rounded-2xl p-6 md:p-8">
+        <div className="flex flex-col md:flex-row gap-6 items-start">
+          <img
+            src={testimonials[currentIndex].image}
+            alt={testimonials[currentIndex].name}
+            className="w-20 h-20 rounded-full object-cover flex-shrink-0"
+          />
+
+          <div className="flex-1">
+            <div className="text-2xl font-light mb-4 leading-tight italic">
+              "{testimonials[currentIndex].quote}"
+            </div>
+            <p className="text-sm text-muted-foreground mb-4">
+              {testimonials[currentIndex].text}
+            </p>
+            <div className="flex items-center justify-between flex-wrap gap-4">
+              <div>
+                <div className="font-semibold">{testimonials[currentIndex].name}</div>
+                <div className="text-sm text-muted-foreground">{testimonials[currentIndex].role}</div>
               </div>
-              <p className="text-sm text-muted-foreground mb-4">
-                {testimonials[currentIndex].text}
-              </p>
-              <div className="flex items-center justify-between flex-wrap gap-4">
-                <div>
-                  <div className="font-semibold">{testimonials[currentIndex].name}</div>
-                  <div className="text-sm text-muted-foreground">{testimonials[currentIndex].role}</div>
-                </div>
-                <div className="text-sm font-semibold text-lime">
-                  {testimonials[currentIndex].result}
-                </div>
+              <div className="text-sm font-semibold text-lime">
+                {testimonials[currentIndex].result}
               </div>
             </div>
           </div>
+        </div>
 
-          <div className="flex items-center justify-between mt-6 pt-6 border-t">
-            <div className="flex gap-2">
-              {testimonials.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentIndex(index)}
-                  className={`w-2 h-2 rounded-full transition-all ${
-                    index === currentIndex ? 'bg-lime w-6' : 'bg-gray-300'
+        <div className="flex items-center justify-between mt-6 pt-6 border-t">
+          <div className="flex gap-2">
+            {testimonials.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentIndex(index)}
+                className={`w-2 h-2 rounded-full transition-all ${index === currentIndex ? 'bg-lime w-6' : 'bg-gray-300'
                   }`}
-                  aria-label={`Go to testimonial ${index + 1}`}
-                />
-              ))}
-            </div>
-            
-            <div className="flex gap-2">
-              <Button onClick={prev} size="icon" variant="ghost" className="h-8 w-8">
-                <ChevronLeft className="w-4 h-4" />
-              </Button>
-              <Button onClick={next} size="icon" variant="ghost" className="h-8 w-8">
-                <ChevronRight className="w-4 h-4" />
-              </Button>
-            </div>
+                aria-label={`Go to testimonial ${index + 1}`}
+              />
+            ))}
+          </div>
+
+          <div className="flex gap-2">
+            <Button onClick={prev} size="icon" variant="ghost" className="h-8 w-8">
+              <ChevronLeft className="w-4 h-4" />
+            </Button>
+            <Button onClick={next} size="icon" variant="ghost" className="h-8 w-8">
+              <ChevronRight className="w-4 h-4" />
+            </Button>
           </div>
         </div>
       </div>
-    </section>;
+    </div>
+  </section>;
 };
 export default TestimonialsSection;

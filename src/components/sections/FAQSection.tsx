@@ -63,8 +63,23 @@ const FAQSection = () => {
           viewport={{ once: true, margin: "-100px" }}
         >
           <motion.div variants={itemVariants}>
-            <span className="inline-flex items-center gap-2 text-sm text-muted-foreground mb-4">
-              <span className="w-2 h-2 rounded-full bg-accent" />
+            <span className="inline-flex items-center gap-1 rounded-full bg-yellow-400/10 px-3 py-1.5 text-xs text-yellow-300 ring-1 ring-yellow-300/20 uppercase tracking-tight mb-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="h-3.5 w-3.5"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+                <path d="M12 17h.01" />
+              </svg>
               FAQ
             </span>
             <h2 className="mb-4">

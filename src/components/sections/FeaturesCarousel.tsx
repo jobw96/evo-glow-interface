@@ -69,6 +69,23 @@ const FeaturesCarousel = () => {
     >
       <div className="max-w-7xl mx-auto">
         <div className="mb-16 text-center">
+          <span className="inline-flex items-center gap-1 rounded-full bg-purple-400/10 px-3 py-1.5 text-xs text-purple-300 ring-1 ring-purple-300/20 uppercase tracking-tight mb-4">
+            <motion.svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="h-3.5 w-3.5"
+            >
+              <path d="M12 2v20M2 12h20" />
+            </motion.svg>
+            Features
+          </span>
           <h2 className="mb-4 text-4xl md:text-5xl font-bold">
             Your AI coach,
             <br />
