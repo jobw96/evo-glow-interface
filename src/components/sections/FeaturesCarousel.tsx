@@ -65,7 +65,7 @@ const FeaturesCarousel = () => {
     <section
       id="features"
       ref={sectionRef}
-      className="scroll-reveal py-24 px-6 bg-secondary/30"
+      className="scroll-reveal py-24 px-6"
     >
       <div className="max-w-7xl mx-auto">
         <div className="mb-16 text-center">
@@ -117,13 +117,13 @@ const FeaturesCarousel = () => {
             </AnimatePresence>
           </div>
 
-          {/* Navigation Arrows - Hero Style */}
+          {/* Navigation Arrows - Subtle Style */}
           <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 flex justify-between px-4 md:-mx-20">
             <motion.button
               onClick={prev}
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-white text-black rounded-xl p-3 md:p-4 shadow-lg hover:bg-gray-100 transition-all duration-300 backdrop-blur-sm"
+              className="bg-white/5 text-gray-300 border border-white/10 hover:bg-white/10 hover:border-white/20 backdrop-blur-sm rounded-xl p-3 md:p-4 transition-all duration-300"
             >
               <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
             </motion.button>
@@ -131,7 +131,7 @@ const FeaturesCarousel = () => {
               onClick={next}
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-white text-black rounded-xl p-3 md:p-4 shadow-lg hover:bg-gray-100 transition-all duration-300 backdrop-blur-sm"
+              className="bg-white/5 text-gray-300 border border-white/10 hover:bg-white/10 hover:border-white/20 backdrop-blur-sm rounded-xl p-3 md:p-4 transition-all duration-300"
             >
               <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />
             </motion.button>
@@ -144,8 +144,8 @@ const FeaturesCarousel = () => {
                 key={index}
                 onClick={() => setCurrentIndex(index)}
                 className={`h-2 rounded-full transition-all duration-300 ${index === currentIndex
-                    ? "w-8 bg-white"
-                    : "w-2 bg-white/30 hover:bg-white/50"
+                  ? "w-8 bg-white"
+                  : "w-2 bg-white/30 hover:bg-white/50"
                   }`}
               />
             ))}

@@ -70,9 +70,6 @@ const HowItWorks = () => {
 
   return (
     <section className="py-24 px-6 relative overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-accent/5 to-transparent pointer-events-none" />
-
       <div className="max-w-6xl mx-auto relative">
         <ScrollAnimation direction="fade" className="text-center mb-20">
           <h2 className="mb-4 text-4xl md:text-5xl font-bold">How It Works</h2>
