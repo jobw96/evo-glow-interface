@@ -6,7 +6,6 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { ThemeProvider } from "next-themes";
 import { AnimatePresence } from "framer-motion";
 import { PageTransition, ScrollToTop } from "@/components/ui/page-transition";
-import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 import Index from "./pages/Index";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
@@ -19,7 +18,6 @@ function AppRoutes() {
   return (
     <>
       <ScrollToTop />
-      <Breadcrumbs />
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<PageTransition><Index /></PageTransition>} />
