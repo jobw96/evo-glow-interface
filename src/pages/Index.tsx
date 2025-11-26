@@ -6,10 +6,12 @@ import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import FAQSection from "@/components/sections/FAQSection";
 import WaitlistSection from "@/components/sections/WaitlistSection";
 import FooterSection from "@/components/sections/FooterSection";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <ThemeToggle />
       <Hero 
         title="Push Your Limits with AI Precision"
         description="Train smarter with real-time feedback, AI-driven insights, and precision tracking that adapts to your goals."
