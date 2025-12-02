@@ -27,8 +27,8 @@ const WaitlistSection = () => {
     e.preventDefault();
     if (email) {
       toast({
-        title: "You're on the list!",
-        description: "We'll notify you when EvoTrack launches."
+        title: "Aanvraag verstuurd!",
+        description: "We nemen binnen 24 uur contact met je op."
       });
       setEmail("");
     }
@@ -45,7 +45,7 @@ const WaitlistSection = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/50 to-transparent" />
 
           <div className="relative z-10 text-center text-white px-6 max-w-2xl">
-            <span className="inline-flex items-center gap-1 rounded-full bg-pink-400/10 px-3 py-1.5 text-xs text-pink-300 ring-1 ring-pink-300/20 uppercase tracking-tight mb-4">
+            <span className="inline-flex items-center gap-1 rounded-full bg-lime/10 px-3 py-1.5 text-xs text-lime ring-1 ring-lime/20 uppercase tracking-tight mb-4">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="14"
@@ -63,17 +63,17 @@ const WaitlistSection = () => {
                 <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
                 <path d="M16 3.13a4 4 0 0 1 0 7.75" />
               </svg>
-              Join Waitlist
+              Start je project
             </span>
-            <h2 className="text-white mb-4">Be the First to<br />Experience EvoTrack</h2>
+            <h2 className="text-white mb-4">Klaar om te beginnen?<br />Neem contact op</h2>
             <p className="text-lg text-white/90 mb-8">
-              Sign up today to get early access, exclusive updates, and priority launch offers.
+              Laat je gegevens achter en we nemen binnen 24 uur contact met je op voor een vrijblijvend gesprek.
             </p>
 
             <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <Input type="email" placeholder="jane@framer.com" value={email} onChange={e => setEmail(e.target.value)} required className="bg-white/10 backdrop-blur-lg border-white/20 text-white placeholder:text-white/60 h-12" />
-              <Button type="submit" className="neuro-button whitespace-nowrap h-12 px-8 text-zinc-950 bg-lime-400 hover:bg-lime-300 bg-green-500 hover:bg-green-400">
-                Join the waitlist
+              <Input type="email" placeholder="jouw@email.nl" value={email} onChange={e => setEmail(e.target.value)} required className="bg-white/10 backdrop-blur-lg border-white/20 text-white placeholder:text-white/60 h-12" />
+              <Button type="submit" className="whitespace-nowrap h-12 px-8 bg-lime text-navy hover:bg-lime/90">
+                Verstuur aanvraag
               </Button>
             </form>
           </div>

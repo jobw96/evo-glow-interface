@@ -5,26 +5,26 @@ const TestimonialsSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const testimonials = [{
-    quote: "Smart coaching for every mile.",
-    text: "EvoTrack has completely redefined how I train. The AI coaching adapts to my pace, recovery, and even my mindset on race day. It feels like having a personal trainer on my wrist.",
-    name: "Darius Cole",
-    role: "Marathon Runner",
-    result: "Increased consistency by 42%",
-    image: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=400&h=500&fit=crop"
+    quote: "Perfecte webshop, direct meer verkopen.",
+    text: "Nieuwblik heeft onze volledige webshop gebouwd inclusief product fotografie. Het resultaat overtrof alle verwachtingen en onze conversie is met 65% gestegen.",
+    name: "Lisa van der Berg",
+    role: "Eigenaar Kitchen Essentials",
+    result: "65% hogere conversie",
+    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=500&fit=crop"
   }, {
-    quote: "Recovery insights that actually work.",
-    text: "The sleep and HRV tracking helped me understand when to push hard and when to rest. I've seen my performance improve while actually training less.",
-    name: "Sarah Chen",
-    role: "Triathlete",
-    result: "Improved race times by 18%",
-    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=500&fit=crop"
+    quote: "Modern design dat perfect past bij ons merk.",
+    text: "De website die Nieuwblik voor ons ontwikkelde is niet alleen visueel prachtig, maar laadt ook razendsnel en scoort hoog in Google. Precies wat we nodig hadden.",
+    name: "Mark Jansen",
+    role: "Marketing Manager TechFlow",
+    result: "Top 3 in Google binnen 2 maanden",
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=500&fit=crop"
   }, {
-    quote: "Data that drives real progress.",
-    text: "As a competitive cyclist, having accurate power and heart rate data is crucial. EvoTrack delivers medical-grade accuracy with insights I can actually use.",
-    name: "Marcus Johnson",
-    role: "Professional Cyclist",
-    result: "Reduced overtraining by 35%",
-    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=500&fit=crop"
+    quote: "Branding die écht verschil maakt.",
+    text: "Van logo tot complete huisstijl - Nieuwblik heeft ons merk getransformeerd. We worden nu direct herkend en dat voelen we terug in onze omzet.",
+    name: "Sophie Vermeulen",
+    role: "Oprichter BLOOM Cosmetics",
+    result: "3x meer merkherkenning",
+    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=500&fit=crop"
   }];
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
@@ -50,7 +50,7 @@ const TestimonialsSection = () => {
   return <section id="testimonials" ref={sectionRef} className="scroll-reveal py-16 px-6">
     <div className="max-w-4xl mx-auto">
       <div className="mb-8 text-center">
-        <span className="inline-flex items-center gap-1 rounded-full bg-orange-400/10 px-3 py-1.5 text-xs text-orange-300 ring-1 ring-orange-300/20 uppercase tracking-tight mb-4">
+        <span className="inline-flex items-center gap-1 rounded-full bg-lime/10 px-3 py-1.5 text-xs text-lime ring-1 ring-lime/20 uppercase tracking-tight mb-4">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="14"
@@ -65,11 +65,11 @@ const TestimonialsSection = () => {
           >
             <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
           </svg>
-          Testimonials
+          Reviews
         </span>
-        <h2 className="mb-3">Trusted by Athletes Worldwide</h2>
+        <h2 className="mb-3">Wat onze klanten zeggen</h2>
         <p className="text-base text-muted-foreground">
-          Real feedback from athletes pushing their limits
+          Echte resultaten van bedrijven die met ons samenwerkten
         </p>
       </div>
 
