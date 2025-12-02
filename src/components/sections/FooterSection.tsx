@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Instagram, Music2, Linkedin, ArrowUpRight } from "lucide-react";
+import nieuwblikLogo from "@/assets/nieuwblik-logo.svg";
 
 const FooterSection = () => {
   const container = useRef(null);
@@ -23,7 +24,7 @@ const FooterSection = () => {
           style={{ y }}
           className="text-[20vw] font-bold leading-none tracking-tighter text-white whitespace-nowrap"
         >
-          EVOTRACK
+          NIEUWBLIK
         </motion.h1>
       </div>
 
@@ -35,10 +36,10 @@ const FooterSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="flex items-center gap-2 text-2xl font-bold tracking-tight"
+              className="flex items-center gap-3"
             >
-              <span className="text-3xl">⚡</span>
-              EvoTrack
+              <img src={nieuwblikLogo} alt="Nieuwblik" className="h-8 w-8" />
+              <span className="text-2xl font-bold tracking-tight">Nieuwblik</span>
             </motion.div>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -47,8 +48,7 @@ const FooterSection = () => {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="text-gray-400 max-w-xs"
             >
-              Track every move, analyze your performance, and get real-time
-              coaching, all from your wrist.
+              Wij creëren digitale oplossingen die jouw merk laten groeien. Van webdesign tot e-commerce en branding.
             </motion.p>
           </div>
 
@@ -63,7 +63,7 @@ const FooterSection = () => {
               Navigation
             </motion.h4>
             <nav className="flex flex-col gap-4">
-              {["About", "Features", "Testimonials", "FAQ"].map((item, i) => (
+              {["Webdesign", "E-commerce", "Branding", "Contact"].map((item, i) => (
                 <motion.a
                   key={item}
                   href={`#${item.toLowerCase()}`}
@@ -73,7 +73,7 @@ const FooterSection = () => {
                   transition={{ duration: 0.5, delay: 0.3 + i * 0.1 }}
                   className="text-gray-400 hover:text-white transition-colors flex items-center gap-2 group"
                 >
-                  <span className="w-1.5 h-1.5 rounded-full bg-accent scale-0 group-hover:scale-100 transition-transform" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-lime scale-0 group-hover:scale-100 transition-transform" />
                   {item}
                 </motion.a>
               ))}
@@ -130,14 +130,14 @@ const FooterSection = () => {
               Get in touch
             </motion.h4>
             <motion.a
-              href="mailto:hello@evotrack.com"
+              href="mailto:info@nieuwblik.nl"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.6 }}
-              className="text-2xl font-light hover:text-accent transition-colors flex items-center gap-2"
+              className="text-2xl font-light hover:text-lime transition-colors flex items-center gap-2"
             >
-              hello@evotrack.com
+              info@nieuwblik.nl
               <ArrowUpRight className="w-5 h-5" />
             </motion.a>
           </div>
@@ -147,13 +147,13 @@ const FooterSection = () => {
           style={{ opacity }}
           className="pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-gray-500"
         >
-          <p>© 2025 EvoTrack. All rights reserved.</p>
+          <p>© 2025 Nieuwblik. Alle rechten voorbehouden.</p>
           <div className="flex gap-6">
             <a href="#" className="hover:text-white transition-colors">
-              Privacy Policy
+              Privacy
             </a>
             <a href="#" className="hover:text-white transition-colors">
-              Terms of Service
+              Voorwaarden
             </a>
           </div>
         </motion.div>
