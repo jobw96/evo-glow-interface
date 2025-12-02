@@ -1,34 +1,34 @@
 import { motion } from "framer-motion";
 import {
-    Github,
-    Slack,
-    Trello,
-    Figma,
-    Database,
-    Cloud,
+    Code2,
+    Palette,
+    ShoppingBag,
+    Smartphone,
+    Globe,
+    Layers,
     Zap,
     Plug,
     Workflow,
     ShieldCheck,
     Gauge,
-    MousePointerClick
+    Sparkles
 } from "lucide-react";
 
 const IntegrationsSection = () => {
     const integrations = [
-        { icon: Github, label: "GitHub" },
-        { icon: Slack, label: "Slack" },
-        { icon: Trello, label: "Trello" },
-        { icon: Figma, label: "Figma" },
-        { icon: Database, label: "Database" },
-        { icon: Cloud, label: "Cloud" },
+        { icon: Code2, label: "React" },
+        { icon: Palette, label: "Figma" },
+        { icon: ShoppingBag, label: "Shopify" },
+        { icon: Smartphone, label: "Responsive" },
+        { icon: Globe, label: "SEO" },
+        { icon: Layers, label: "Design Systems" },
     ];
 
     const features = [
-        { icon: Workflow, label: "Instant sync" },
-        { icon: ShieldCheck, label: "Enterprise security" },
-        { icon: Gauge, label: "Real-time updates" },
-        { icon: MousePointerClick, label: "One-click setup" },
+        { icon: Workflow, label: "Agile werkwijze" },
+        { icon: ShieldCheck, label: "Veilig & betrouwbaar" },
+        { icon: Gauge, label: "Snelle laadtijden" },
+        { icon: Sparkles, label: "Modern design" },
     ];
 
     return (
@@ -41,15 +41,15 @@ const IntegrationsSection = () => {
                     transition={{ duration: 0.6 }}
                     className="text-center"
                 >
-                    <span className="inline-flex items-center gap-1 rounded-full bg-lime-400/10 px-3 py-1.5 text-xs text-lime-300 ring-1 ring-lime-300/20 uppercase tracking-tight">
+                    <span className="inline-flex items-center gap-1 rounded-full bg-lime/10 px-3 py-1.5 text-xs text-lime ring-1 ring-lime/20 uppercase tracking-tight">
                         <Plug className="h-3.5 w-3.5" />
-                        Integrations
+                        Technologieën
                     </span>
                     <h2 className="text-4xl md:text-5xl font-semibold tracking-tight mt-4">
-                        Connect your entire tech stack
+                        Moderne tools voor sterke resultaten
                     </h2>
                     <p className="mx-auto mt-3 max-w-2xl text-sm sm:text-base text-muted-foreground">
-                        One platform, infinite possibilities. Sync with all your favorite tools.
+                        We werken met de nieuwste technologieën om jouw digitale aanwezigheid te optimaliseren.
                     </p>
                 </motion.div>
 
@@ -103,7 +103,7 @@ const IntegrationsSection = () => {
 
                             {/* Connection dots */}
                             {[150, 270, 390, 510, 630, 750].map((cx, index) => (
-                                <circle key={index} cx={cx} cy="30" r="4" fill="#A3E635" filter="url(#glow)">
+                                <circle key={index} cx={cx} cy="30" r="4" fill="#00FFAA" filter="url(#glow)">
                                     <animate
                                         attributeName="opacity"
                                         values="0.5;1;0.5"
@@ -126,7 +126,7 @@ const IntegrationsSection = () => {
                                 <path
                                     key={index}
                                     d={path.d}
-                                    stroke="#A3E635"
+                                    stroke="#00FFAA"
                                     strokeWidth="2"
                                     strokeLinecap="round"
                                     fill="none"
@@ -151,10 +151,10 @@ const IntegrationsSection = () => {
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.6, delay: 0.8, type: "spring" }}
-                                className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-lime-400/20 ring-2 ring-lime-300/40"
-                                style={{ boxShadow: "0 0 20px rgba(163,230,53,0.6), 0 0 40px rgba(163,230,53,0.3)" }}
+                                className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-lime/20 ring-2 ring-lime/40"
+                                style={{ boxShadow: "0 0 20px rgba(0,255,170,0.6), 0 0 40px rgba(0,255,170,0.3)" }}
                             >
-                                <Zap className="h-6 w-6 text-lime-300" />
+                                <Zap className="h-6 w-6 text-lime" />
                             </motion.span>
                         </div>
                     </motion.div>
@@ -179,11 +179,11 @@ const IntegrationsSection = () => {
                                     transition={{ duration: 0.4, delay: 0.7 + index * 0.1 }}
                                     className="inline-flex items-center gap-2"
                                 >
-                                    <feature.icon className="h-4 w-4 text-lime-300" />
+                                    <feature.icon className="h-4 w-4 text-lime" />
                                     <span className="font-medium">{feature.label}</span>
                                 </motion.div>
                                 {index < features.length - 1 && (
-                                    <div className="hidden sm:block w-24 h-px border-t border-dashed border-lime-300/40" />
+                                    <div className="hidden sm:block w-24 h-px border-t border-dashed border-lime/40" />
                                 )}
                             </>
                         ))}

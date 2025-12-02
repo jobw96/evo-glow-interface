@@ -11,23 +11,23 @@ const FAQSection = () => {
     });
   };
   const faqs = [{
-    question: "How accurate are EvoTrack's health and fitness metrics?",
-    answer: "EvoTrack uses advanced AI algorithms combined with medical-grade sensors to ensure highly accurate data for heart rate, sleep, recovery, and training insights."
+    question: "Wat zijn de kosten voor een website of webshop?",
+    answer: "De kosten variëren per project. Een basis website start vanaf €2.500, terwijl een complete e-commerce oplossing vanaf €5.000 begint. We maken altijd een offerte op maat na een intake gesprek."
   }, {
-    question: "Can EvoTrack sync with my favorite fitness apps?",
-    answer: "Yes! EvoTrack seamlessly integrates with popular platforms including Strava, Apple Health, Google Fit, and many other fitness ecosystems."
+    question: "Hoe lang duurt het om een website te bouwen?",
+    answer: "Een standaard website realiseren we binnen 4-6 weken. Voor complexere projecten zoals webshops of custom applicaties plannen we 8-12 weken. We houden je gedurende het hele proces op de hoogte."
   }, {
-    question: "Is EvoTrack suitable for all types of athletes?",
-    answer: "Absolutely. Whether you're a runner, cyclist, swimmer, or gym enthusiast, EvoTrack's AI adapts to your specific sport and training style."
+    question: "Krijg ik ook hulp met content en SEO?",
+    answer: "Absoluut! We helpen met het schrijven van SEO-geoptimaliseerde content, keyword onderzoek en technische SEO. Ook verzorgen we productfotografie voor e-commerce projecten."
   }, {
-    question: "How does AI improve my training sessions?",
-    answer: "Our AI analyzes your performance patterns, recovery metrics, and training load to provide personalized coaching recommendations that help you train smarter, not just harder."
+    question: "Kan ik zelf aanpassingen doen na oplevering?",
+    answer: "Ja, we bouwen gebruiksvriendelijke websites waar je zelf eenvoudig content kunt aanpassen. We geven een uitgebreide uitleg en blijven beschikbaar voor vragen."
   }, {
-    question: "What's the battery life like?",
-    answer: "EvoTrack offers up to 7 days of battery life with typical use, and up to 30 hours with continuous GPS tracking for long endurance activities."
+    question: "Bieden jullie ook onderhoud en support?",
+    answer: "Ja, we bieden verschillende onderhoudscontracten aan. Van basis hosting en updates tot volledige support en doorontwikkeling. Je kiest zelf wat bij jouw situatie past."
   }, {
-    question: "Is EvoTrack waterproof?",
-    answer: "Yes, EvoTrack is water-resistant up to 50 meters, making it perfect for swimming, showering, and all weather conditions."
+    question: "Werken jullie ook met bestaande merken of alleen nieuwe?",
+    answer: "We werken met beide! Of je nu een complete rebranding nodig hebt of een website binnen je bestaande huisstijl, wij zorgen ervoor dat alles perfect aansluit bij jouw merk."
   }];
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -63,7 +63,7 @@ const FAQSection = () => {
           viewport={{ once: true, margin: "-100px" }}
         >
           <motion.div variants={itemVariants}>
-            <span className="inline-flex items-center gap-1 rounded-full bg-yellow-400/10 px-3 py-1.5 text-xs text-yellow-300 ring-1 ring-yellow-300/20 uppercase tracking-tight mb-4">
+            <span className="inline-flex items-center gap-1 rounded-full bg-lime/10 px-3 py-1.5 text-xs text-lime ring-1 ring-lime/20 uppercase tracking-tight mb-4">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="14"
@@ -80,21 +80,21 @@ const FAQSection = () => {
                 <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
                 <path d="M12 17h.01" />
               </svg>
-              FAQ
+              Veelgestelde vragen
             </span>
             <h2 className="mb-4">
-              Frequently Asked<br />
-              Questions
+              Vragen over<br />
+              onze diensten?
             </h2>
             <p className="text-lg text-muted-foreground mb-6">
-              Everything you need to know about EvoTrack before getting started.
+              Alles wat je moet weten voordat we van start gaan met jouw project.
             </p>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Button
                 onClick={scrollToWaitlist}
-                className="neuro-button bg-lime-400 hover:bg-lime-300 text-zinc-950 bg-[3bf73b] bg-green-500 hover:bg-green-400"
+                className="bg-lime text-navy hover:bg-lime/90"
               >
-                Join waitlist
+                Neem contact op
               </Button>
             </motion.div>
           </motion.div>
