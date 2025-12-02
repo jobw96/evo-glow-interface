@@ -19,7 +19,7 @@ export function useScrollZoom(options: UseScrollZoomOptions = {}) {
 
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: [start, end],
+    offset: [start as any, end as any],
   });
 
   const scale = useTransform(scrollYProgress, [0, 0.5, 1], [scaleStart, scaleEnd, scaleStart]);
