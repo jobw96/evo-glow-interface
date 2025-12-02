@@ -1,6 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import ecommerceListing from "@/assets/e-commerce-listing.jpg";
+import ecommerceListing2 from "@/assets/e-commerce-listing-2.jpg";
+import packageDesign from "@/assets/package-design.jpg";
+import websiteDesign3 from "@/assets/website-design-3.jpg";
+import websiteDesign2 from "@/assets/website-design-2.jpg";
 
 const FeaturesCarousel = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -8,29 +13,29 @@ const FeaturesCarousel = () => {
 
   const features = [
     {
-      title: "Personalized Training",
-      description: "Tailored workouts that evolve with your goals.",
-      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop"
+      title: "E-commerce listings",
+      description: "Professionele productfotografie en listings die verkopen.",
+      image: ecommerceListing
     },
     {
-      title: "Injury Prevention",
-      description: "Instant alerts when risky movements put you at risk.",
-      image: "https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=800&h=600&fit=crop"
+      title: "Webdesign op maat",
+      description: "Responsive websites die perfect werken op elk apparaat.",
+      image: websiteDesign3
     },
     {
-      title: "Recovery Optimization",
-      description: "AI helps you recover smarter for tomorrow's session.",
-      image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&h=600&fit=crop"
+      title: "Package design",
+      description: "Verpakkingsontwerp dat opvalt en je product versterkt.",
+      image: packageDesign
     },
     {
-      title: "Smart Nutrition Tips",
-      description: "AI suggests meal timing and hydration reminders.",
-      image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800&h=600&fit=crop"
+      title: "E-commerce platforms",
+      description: "Complete online shops met krachtige product presentaties.",
+      image: ecommerceListing2
     },
     {
-      title: "Connected Ecosystem",
-      description: "Syncs seamlessly with your favorite fitness platforms.",
-      image: "https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=800&h=600&fit=crop"
+      title: "Branding & identiteit",
+      description: "Sterke merkidentiteit die blijft hangen bij je doelgroep.",
+      image: websiteDesign2
     }
   ];
 
@@ -69,7 +74,7 @@ const FeaturesCarousel = () => {
     >
       <div className="max-w-7xl mx-auto">
         <div className="mb-16 text-center">
-          <span className="inline-flex items-center gap-1 rounded-full bg-purple-400/10 px-3 py-1.5 text-xs text-purple-300 ring-1 ring-purple-300/20 uppercase tracking-tight mb-4">
+          <span className="inline-flex items-center gap-1 rounded-full bg-lime/10 px-3 py-1.5 text-xs text-lime ring-1 ring-lime/20 uppercase tracking-tight mb-4">
             <motion.svg
               xmlns="http://www.w3.org/2000/svg"
               width="14"
@@ -84,15 +89,15 @@ const FeaturesCarousel = () => {
             >
               <path d="M12 2v20M2 12h20" />
             </motion.svg>
-            Features
+            Portfolio
           </span>
           <h2 className="mb-4 text-4xl md:text-5xl font-bold">
-            Your AI coach,
+            Onze diensten,
             <br />
-            always on your wrist.
+            jouw succes.
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Discover how powerful smart features turn every workout into lasting progress.
+            Ontdek hoe onze expertise jouw merk naar een hoger niveau tilt.
           </p>
         </div>
 
@@ -161,8 +166,8 @@ const FeaturesCarousel = () => {
                 key={index}
                 onClick={() => setCurrentIndex(index)}
                 className={`h-2 rounded-full transition-all duration-300 ${index === currentIndex
-                  ? "w-8 bg-white"
-                  : "w-2 bg-white/30 hover:bg-white/50"
+                  ? "w-8 bg-lime"
+                  : "w-2 bg-white/30 hover:bg-lime/50"
                   }`}
               />
             ))}

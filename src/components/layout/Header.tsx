@@ -1,7 +1,8 @@
 import { Link, useLocation } from "react-router-dom";
-import { Leaf, Menu } from "lucide-react";
+import { Menu } from "lucide-react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import nieuwblikLogo from "@/assets/nieuwblik-logo.svg";
 
 const Header = () => {
   const location = useLocation();
@@ -9,9 +10,9 @@ const Header = () => {
 
   const navItems = [
     { label: "Home", path: "/" },
-    { label: "Device", path: "#device" },
-    { label: "Story", path: "#story" },
-    { label: "Support", path: "#support" },
+    { label: "Webdesign", path: "#webdesign" },
+    { label: "E-commerce", path: "#ecommerce" },
+    { label: "Branding", path: "#branding" },
   ];
 
   const isActive = (path: string) => {
@@ -25,11 +26,9 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-[9999] flex items-center justify-center px-6 py-4 backdrop-blur-md bg-background/95 dark:bg-background/95 border-b border-border/50 shadow-sm">
       <div className="flex items-center justify-between gap-4 w-full max-w-5xl">
         <Link to="/" className="flex items-center gap-3">
-          <div className="h-9 w-9 rounded-xl flex items-center justify-center shadow-sm ring-1 bg-neutral-100 dark:bg-neutral-800 text-black dark:text-white ring-border">
-            <Leaf className="h-4 w-4" />
-          </div>
+          <img src={nieuwblikLogo} alt="Nieuwblik" className="h-9 w-9" />
           <span className="text-lg tracking-tight font-medium text-foreground">
-            solace
+            Nieuwblik
           </span>
         </Link>
 

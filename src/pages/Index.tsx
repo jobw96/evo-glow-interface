@@ -1,4 +1,4 @@
-import ModernHero from "@/components/ui/modern-hero";
+import Hero from "@/components/ui/neural-network-hero";
 import IntroSection from "@/components/sections/IntroSection";
 import FeaturesCarousel from "@/components/sections/FeaturesCarousel";
 import IntegrationsSection from "@/components/sections/IntegrationsSection";
@@ -16,15 +16,16 @@ const Index = () => {
     <div className="min-h-screen">
       <Header />
       <BackToTop />
-      <ModernHero
-        title="Creative Developer"
-        subtitle="& Digital Designer"
-        description="I craft digital experiences that blend beautiful design with seamless functionality. Specializing in modern web technologies, interactive animations, and user-centered design that makes brands memorable and products delightful to use."
-        badgeText="Available for new projects"
+      <Hero
+        title="Innovatieve digitale oplossingen voor jouw merk"
+        description="Bij Nieuwblik creëren we unieke webdesigns, krachtige e-commerce platforms en sterke branding die jouw bedrijf laat groeien. Van concept tot lancering."
+        badgeText="Webdesign • E-commerce • Branding"
+        badgeLabel="Nieuw"
         ctaButtons={[
-          { text: "Join waitlist now", href: "#waitlist", primary: true },
-          { text: "neem contact", href: "/contact" }
+          { text: "Bekijk portfolio", href: "#portfolio", primary: true },
+          { text: "Neem contact op", href: "/contact" }
         ]}
+        microDetails={["Moderne technologie", "Creatieve oplossingen", "Resultaatgericht"]}
       />
       <AppleScrollSection className="py-12">
         <IntroSection />
