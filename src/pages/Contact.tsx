@@ -8,7 +8,6 @@ import { useToast } from "@/hooks/use-toast";
 import { ScrollAnimation } from "@/components/ui/scroll-animation";
 import Header from "@/components/layout/Header";
 import FooterSection from "@/components/sections/FooterSection";
-import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -68,7 +67,6 @@ const Contact = () => {
   return (
     <div className="min-h-screen">
       <Header />
-      <ThemeToggle />
       <div className="pt-24">
         <section className="py-24 px-6">
           <div className="max-w-6xl mx-auto">

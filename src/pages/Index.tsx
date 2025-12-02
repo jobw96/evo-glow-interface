@@ -8,7 +8,6 @@ import FAQSection from "@/components/sections/FAQSection";
 import WaitlistSection from "@/components/sections/WaitlistSection";
 import FooterSection from "@/components/sections/FooterSection";
 import Header from "@/components/layout/Header";
-import { ThemeToggle } from "@/components/ui/theme-toggle";
 import BackToTop from "@/components/ui/back-to-top";
 import { AppleScrollSection, ZoomScrollSection } from "@/components/ui/apple-scroll-section";
 
@@ -16,7 +15,6 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <Header />
-      <ThemeToggle />
       <BackToTop />
       <ModernHero
         title="Creative Developer"

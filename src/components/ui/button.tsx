@@ -41,11 +41,13 @@ export interface ButtonProps
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, animated = true, ...props }, ref) => {
     const Comp = asChild ? Slot : "button";
+    const baseClassName = cn(buttonVariants({ variant, size, className }));
     
     if (animated && !asChild) {
+      const MotionButton = motion.button;
       return (
-        <motion.button
-          className={cn(buttonVariants({ variant, size, className }))}
+        <MotionButton
+          className={baseClassName}
           ref={ref}
           whileHover={{ scale: 1.05, y: -2 }}
           whileTap={{ scale: 0.95 }}
@@ -54,12 +56,12 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
             stiffness: 400,
             damping: 17,
           }}
-          {...props}
+          {...(props as any)}
         />
       );
     }
     
-    return <Comp className={cn(buttonVariants({ variant, size, className }))} ref={ref} {...props} />;
+    return <Comp className={baseClassName} ref={ref} {...props} />;
   },
 );
 Button.displayName = "Button";
